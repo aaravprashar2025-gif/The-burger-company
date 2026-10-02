@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#173b2a" />
+  <meta name="description" content="A fresh, easy-to-browse burger and comfort food menu. Choose your favourites and order at the counter." />
+  <title>The Burger Company — Order from the Counter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="The Burger Company home"><span class="brand-mark">TBC</span><span>The Burger <span class="brand-light">Company</span></span></a>
+    <nav class="top-links" aria-label="Main navigation"><a href="#menu">Menu</a><a href="#how-to-order">How to order</a><a href="#staff">Staff Controls</a></nav>
+    <button class="cart-button" id="cart-open" aria-label="Open your order"><span class="cart-icon">▱</span><span class="cart-label">Your order</span><span class="cart-count" id="cart-count">0</span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> GOOD FOOD, GOOD MOOD</p>
+        <h1>Made for the<br><em>cravings.</em></h1>
+        <p class="hero-sub">Burgers with big energy. Sides worth sharing. Something sweet for the road.</p>
+        <a class="primary-cta" href="#menu">Explore the menu <span>↘</span></a>
+        <div class="hero-note"><span class="note-star">✳</span> Fresh off the grill, made to order</div>
+      </div>
+      <div class="hero-visual">
+        <img class="hero-food" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=85" alt="Juicy cheeseburger with lettuce and tomato" />
+        <div class="hero-stamp"><span>BIG<br>FLAVOUR</span><b>✳</b></div>
+        <div class="hero-caption"><span>THE CROWD PLEASER</span><strong>Every bite hits different.</strong></div>
+      </div>
+      <div class="hero-bottom"><span>BURGERS · BITES · BEVERAGES</span><span>SCROLL TO GET HUNGRY ↓</span></div>
+    </section>
+
+    <section class="order-intro" id="how-to-order">
+      <div class="section-index">01 / EASY AS</div>
+      <div><h2>Order from<br class="mobile-break"> the counter.</h2><p>Pick a favourite, add it to your order, then show your list at the counter. We'll take it from there.</p></div>
+      <div class="steps"><div><span>01</span><b>Browse</b><small>Find your thing</small></div><i>→</i><div><span>02</span><b>Build your order</b><small>Add a little extra</small></div><i>→</i><div><span>03</span><b>Head to the counter</b><small>Fresh food incoming</small></div></div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="menu-heading"><div><p class="eyebrow">THE GOOD STUFF</p><h2>The whole menu<span>.</span></h2></div><label class="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="Find a favourite..." aria-label="Search the menu"/><kbd>⌘ K</kbd></label></div>
+      <div class="category-row" id="categories" aria-label="Menu categories"></div>
+      <div class="menu-content">
+        <div class="menu-main"><div class="category-title"><div><span class="category-kicker" id="category-kicker">MADE FOR THE MAIN EVENT</span><h3 id="category-title">Burgers</h3></div><span class="item-total" id="item-total"></span></div><div class="item-grid" id="item-grid"></div></div>
+        <aside class="order-card" id="order-card"><div class="order-card-top"><div class="order-mini-mark">TBC</div><span>YOUR PICK LIST</span></div><h3>Good taste<br>starts here.</h3><p>Add a few favourites and we'll keep your list ready for the counter.</p><div class="order-empty" id="order-empty"><span>✳</span><b>Your order is looking hungry.</b><small>Tap “Add” on anything that catches your eye.</small></div><div class="order-lines" id="order-lines"></div><div class="order-total"><span>ESTIMATED TOTAL</span><b id="order-total">₹0</b></div><button class="counter-cta" id="counter-cta">I'm ready to order <span>↗</span></button><small class="counter-hint">Show this list at the counter to place your order.</small></aside>
+      </div>
+    </section>
+
+    <section class="menu-board"><div class="board-copy"><p class="eyebrow">STRAIGHT FROM THE SOURCE</p><h2>Same menu.<br><em>Fresh perspective.</em></h2><p>Menu details are transcribed from the restaurant's menu board. A few small-print prices were difficult to read in the photo; please confirm those at the counter.</p><a href="menu-reference.jpeg" target="_blank" rel="noreferrer">View the original menu photo ↗</a></div><a class="board-image" href="menu-reference.jpeg" target="_blank" rel="noreferrer" aria-label="Open original menu photo"><img src="menu-reference.jpeg" alt="The original restaurant menu board used as the menu reference"/><span>ORIGINAL MENU BOARD <b>↗</b></span></a></section>
+
+    <section class="last-call"><span class="last-star">✳</span><p class="eyebrow">THAT'S YOUR SIGN</p><h2>Meet you<br><em>at the counter.</em></h2><a href="#menu" class="primary-cta light-cta">Build your order <span>↑</span></a></section>
+  </main>
+  <main id="staff" class="staff-main" hidden>
+    <section id="staff-login" class="staff-login-card">
+      <p class="eyebrow"><span class="dot"></span> THE BURGER COMPANY</p>
+      <h1>Staff<br><em>Controls.</em></h1>
+      <p>Enter the staff password to manage the menu.</p>
+      <form id="staff-login-form"><label for="staff-password">Password</label><input id="staff-password" type="password" inputmode="numeric" autocomplete="current-password" placeholder="Enter password" required><button class="primary-cta" type="submit">Open staff controls <span>↗</span></button><small id="staff-error" class="staff-error" role="alert"></small></form>
+      <a href="#top" class="staff-back">← Back to menu</a>
+    </section>
+    <section id="staff-editor" class="staff-editor" hidden>
+      <div class="staff-title-row"><div><p class="eyebrow"><span class="dot"></span> STAFF CONTROLS</p><h1>Manage the menu.</h1><p class="staff-lede">Change item names, descriptions, prices, and categories. Save when you're done.</p></div><button class="staff-logout" id="staff-logout">Lock controls</button></div>
+      <div class="staff-toolbar"><span id="staff-save-status" role="status">Your changes are ready to edit.</span><div><button class="staff-reset" id="staff-reset">Reset menu</button><button class="staff-save" id="staff-save">Save changes</button></div></div>
+      <div id="staff-categories" class="staff-categories"></div>
+      <button id="staff-add-category" class="staff-add-category">＋ Add a category</button>
+      <details class="staff-transfer"><summary>Move this menu to another device</summary><p>Download a menu backup to share it, or load a backup someone sent you.</p><div><button id="staff-export">Download menu backup</button><label class="staff-import">Load a menu backup<input id="staff-import-file" type="file" accept="application/json,.json" hidden></label></div></details>
+      <a href="#top" class="staff-back">← Back to the restaurant menu</a>
+    </section>
+  </main>
+  <footer id="site-footer"><a class="brand footer-brand" href="#top" aria-label="The Burger Company home"><span class="brand-mark">TBC</span><span>The Burger <span class="brand-light">Company</span></span></a><span>Good food. No fuss.</span><a class="review-link" href="https://share.google/tg48tEOJ9jys0Rf70" target="_blank" rel="noopener noreferrer">Leave us a review ↗</a><a href="#staff">Staff Controls</a><a href="#top">Back to top ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="scrim" id="scrim"></div>
+  <script src="menu-data.js"></script>
+  <script src="app.js"></script>
+  <script src="staff.js"></script>
+</body>
+</html>
